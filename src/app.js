@@ -1,3 +1,6 @@
-import {getWeather} from './call-api.js'
+import {displayWeatherData} from './call-api.js'
 
-getWeather('London')
+let city = prompt("Enter city")
+city.charAt(0).toUpperCase()
+
+displayWeatherData(city)
