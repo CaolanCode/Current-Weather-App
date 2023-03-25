@@ -75,7 +75,7 @@ export const displayDataToday = ({city, tempC, tempF, condName, condIcon, time, 
   // event listeners
   celcius.addEventListener('click', () => {
     temp.innerText = tempC + '°C'
-    wind.innerText = 'Wind ' + windKPH + 'kph'
+    wind.innerText = 'Wind: ' + windKPH + 'kph'
   })
   fahrenheit.addEventListener('click', () => {
     temp.innerText = tempF + '°F'

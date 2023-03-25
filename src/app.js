@@ -22,4 +22,5 @@ inputBtn.addEventListener('click', async() => {
   const capCity = city.charAt(0).toUpperCase() + city.slice(1)
   const data = await parseWeatherData(capCity)
   document.body.appendChild(displayDataToday(data))
+  document.querySelector('.location-input').value = ""
 })
