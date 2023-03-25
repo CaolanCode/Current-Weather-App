@@ -17,7 +17,7 @@ export const header = () => {
   inputBtn.addEventListener('click', () => {
     const city = input.value 
     const capCity = city.charAt(0).toUpperCase() + city.slice(1)
-    displayWeatherData(capCity)
+    parseWeatherData(capCity)
   })
   inputContainer.appendChild(input)
   inputContainer.appendChild(inputBtn)
@@ -26,14 +26,24 @@ export const header = () => {
   return container
 }
 
-export async function displayWeatherData(city) {
+export async function parseWeatherData(city) {
   try{
     const weatherData = await getWeatherData(city)
-    console.log(weatherData)
-    const temperature = weatherData.current.temp_c
+    const tempC = weatherData.current.temp_c
+    const tempF = weatherData.current.temp_f
     const condition = weatherData.current.condition.text
-    console.log(`The termperature in ${city} is ${temperature}C and the condition is ${condition}`)
+    const dateTime = weatherData.location.localtime
+    const time = dateTime.substring(dateTime.length - 5)
+    const windKPH = weatherData.current.wind_kph
+    const windMPH = weatherData.current.wind_mph
+    const latitude = weatherData.location.lat
+    const longitude = weatherData.location.lon
+    displayWeatherData(city, tempC, tempF, condition, time, windKPH, windMPH, latitude, longitude)
   } catch(error) {
     console.error('Error fetching weather data: ', error)
   }
 }
+
+export function displayWeatherData(city, tempC, tempF, condition, time, windKPH, windMPH, latitude, longitude) {
+
+} 
