@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Alkatra', cursive;
+  border: 1px solid black;
 }
 body{
   background-image: url('../images/bg-image.jpg');
@@ -41,6 +42,40 @@ body{
   padding-top: 1vh;
   cursor: pointer;
 }
-.header-container, .input-btn, .location-input, .location-input::placeholder{
+.header-container, .input-btn, .location-input, .location-input::placeholder, .city, .temp, .cond-text, .time-text, .wind, .lat, .lon, .temp-btn, .conversion-container{
   color: white;
+}
+
+/* todays forecast */
+.display-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20vw;
+  border-radius: 3vw;
+  position: absolute;
+  left: 40%;
+  padding: 5vh 0;
+}
+.temp{
+  font-size: 3rem;
+}
+.conversion-container, .cityTime{
+  font-size: 0.7rem;
+}
+.temp-btn{
+  background: none;
+  margin: 0 0.3vw;
+  cursor: pointer;
+}
+.city, .time-text{
+  font-size: 2rem;
+}
+.cond-image{
+  width: 100%;
+  height: 100%;
+}
+.cond-text{
+  text-align: center;
 }
