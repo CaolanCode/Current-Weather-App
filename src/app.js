@@ -1,5 +1,7 @@
-import {header} from './ui.js'
+import {header, displayDataToday} from './ui.js'
+import { parseWeatherData } from './call-api.js'
 import './styles/style.css'
+
 
 // google symbol link 
 const link = document.createElement('link')
@@ -10,3 +12,10 @@ document.head.appendChild(link)
 // append UI
 document.body.appendChild(header())
 
+const inputBtn = document.querySelector('.input-btn')
+inputBtn.addEventListener('click', async() => {
+  const city = document.querySelector('.location-input').value
+  const capCity = city.charAt(0).toUpperCase() + city.slice(1)
+  const data = await parseWeatherData(capCity)
+  document.body.appendChild(displayDataToday(data))
+})
