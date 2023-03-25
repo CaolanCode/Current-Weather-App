@@ -5,6 +5,14 @@
   box-sizing: border-box;
   font-family: 'Alkatra', cursive;
 }
+body{
+  background-image: url('../images/bg-image.jpg');
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
 
 /* header */
 .header-container{
@@ -17,7 +25,7 @@
 .input-container{
   display: flex;
   align-items: center;
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 3vw;
   padding: 0 1vw;
 }
@@ -25,10 +33,14 @@
   border: none;
   text-align: center;
   outline: none;
+  background: none;
 }
 .input-btn{
   background: transparent;
   border: none;
   padding-top: 1vh;
   cursor: pointer;
+}
+.header-container, .input-btn, .location-input, .location-input::placeholder{
+  color: white;
 }
