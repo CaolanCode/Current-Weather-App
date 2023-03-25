@@ -14,6 +14,10 @@ document.body.appendChild(header())
 
 const inputBtn = document.querySelector('.input-btn')
 inputBtn.addEventListener('click', async() => {
+  const container = document.querySelector('.display-container')
+  if(document.body.contains(container)) {
+    container.remove()
+  }
   const city = document.querySelector('.location-input').value
   const capCity = city.charAt(0).toUpperCase() + city.slice(1)
   const data = await parseWeatherData(capCity)
