@@ -4,7 +4,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Alkatra', cursive;
-  border: 1px solid black;
 }
 body{
   background-image: url('../images/bg-image.jpg');
@@ -65,9 +64,13 @@ body{
   font-size: 0.7rem;
 }
 .temp-btn{
-  background: none;
   margin: 0 0.3vw;
   cursor: pointer;
+  background: rgba(255,255,255,0.2);
+  width: 2vw;
+  height: 2vw;
+  border-radius: 10px;
+  border: none;
 }
 .city, .time-text{
   font-size: 2rem;

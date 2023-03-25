@@ -66,10 +66,10 @@ export const displayDataToday = ({city, tempC, tempF, condName, condIcon, time, 
   latLon.classList.add('div')
   const lat = document.createElement('div')
   lat.classList.add('lat')
-  lat.innerText = 'Latitude: ' + Math.floor(latitude)
+  lat.innerText = 'Latitude: ' + Math.floor(latitude) + '°'
   const lon = document.createElement('div')
   lon.classList.add('lon')
-  lon.innerText = 'Longitude: ' + Math.floor(longitude)
+  lon.innerText = 'Longitude: ' + Math.floor(longitude) + '°'
   latLon.appendChild(lat)
   latLon.appendChild(lon)
   // event listeners
