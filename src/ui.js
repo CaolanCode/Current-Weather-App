@@ -2,7 +2,7 @@ export const header = () => {
   // container
   const container = document.createElement('div')
   container.classList.add('header-container')
-  container.innerText = 'Weather Forecast'
+  container.innerText = 'Current Weather'
   // location input
   const inputContainer = document.createElement('div')
   inputContainer.classList.add('input-container')
@@ -66,10 +66,10 @@ export const displayDataToday = ({city, tempC, tempF, condName, condIcon, time, 
   latLon.classList.add('div')
   const lat = document.createElement('div')
   lat.classList.add('lat')
-  lat.innerText = 'Latitude: ' + Math.floor(latitude) + '°'
+  lat.innerText = 'Latitude: ' + latitude + '°'
   const lon = document.createElement('div')
   lon.classList.add('lon')
-  lon.innerText = 'Longitude: ' + Math.floor(longitude) + '°'
+  lon.innerText = 'Longitude: ' + longitude + '°'
   latLon.appendChild(lat)
   latLon.appendChild(lon)
   // event listeners
