@@ -1,6 +1,6 @@
 export async function getWeatherData(city) {
   const apiKey = "b08d495197a947a5a54161628232303"
-  const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`
+  const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`
   const reponse = await fetch(apiUrl)
   return reponse.json()
 }
